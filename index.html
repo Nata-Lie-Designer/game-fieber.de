@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Fieber – Interaktive Spielräume für die ganze Familie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <!-- SVG-Icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="icon-star" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12 1.8l3.1 6.6 7.2.9-5.3 5 1.4 7.1L12 17.9l-6.4 3.5L7 14.3l-5.3-5 7.2-.9L12 1.8z"/>
+    </symbol>
+    <symbol id="icon-timer" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <path d="M12 2a10 10 0 1 1-7.07 2.93"/>
+        <path d="M8 16l5.5-5.5"/>
+      </g>
+      <circle cx="12" cy="12" r="2.5" fill="currentColor"/>
+    </symbol>
+  </svg>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="header__logo" href="index.html" aria-label="Game Fieber – Startseite">
+        <img src="assets/img/logo.svg" alt="Game Fieber" width="181" height="30">
+      </a>
+
+      <input class="header__toggle" type="checkbox" id="nav-toggle" aria-label="Menü öffnen">
+      <label class="header__burger" for="nav-toggle" aria-hidden="true">
+        <span></span>
+      </label>
+
+      <nav class="nav" aria-label="Hauptnavigation">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="spiele/index.html">Games</a>
+          </li>
+          <li class="nav__item nav__item--dropdown">
+            <a class="nav__link" href="#parties" aria-haspopup="true">
+              Parties
+              <svg class="nav__chevron" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 6l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <ul class="nav__submenu">
+              <li><a class="nav__sublink" href="parties/kindergeburtstag/index.html">Kindergeburtstag</a></li>
+              <li><a class="nav__sublink" href="parties/geburtstag/index.html">Geburtstag</a></li>
+              <li><a class="nav__sublink" href="parties/firmenevent/index.html">Firmenevent</a></li>
+              <li><a class="nav__sublink" href="parties/jga/index.html">JGA</a></li>
+              <li><a class="nav__sublink" href="parties/schulausflug/index.html">Schulausflüge</a></li>
+            </ul>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="gutscheine/index.html">Gutscheine</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#anfahrt">Anfahrt</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="preise/index.html">Preise</a>
+          </li>
+        </ul>
+      </nav>
+
+      <a class="btn btn--primary header__cta" href="buchen/index.html">Buchen</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="pixel-rain" aria-hidden="true" data-pixel-rain>
+        <canvas class="pixel-rain__canvas" width="2560" height="1600"></canvas>
+      </div>
+      <div class="container hero__content">
+        <h1 class="hero__title">Interaktive<br>Spielräume in Bonn</h1>
+        <a class="btn btn--secondary hero__cta" href="spiele/index.html">Spiele entdecken</a>
+      </div>
+    </section>
+
+    <section class="games" id="spiele">
+      <div class="container section-head">
+        <h2 class="section-title">Unsere Spiele</h2>
+        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="games__slider" data-slider>
+        <ul class="games__track" data-slider-track>
+          <li class="game-card">
+            <a class="game-card__media" href="spiele/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/games/placeholder.svg" alt="" width="410" height="300" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <h3 class="game-card__title"><a href="spiele/index.html">Floor is Lava</a></h3>
+              <p class="game-card__subtitle">Stürze dich ins geschmolzene Chaos</p>
+              <dl class="game-card__specs">
+                <div class="game-card__spec">
+                  <dt>Schwierigkeit</dt>
+                  <dd class="game-card__rating" aria-label="2 von 4">
+                    <svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg>
+                  </dd>
+                </div>
+                <div class="game-card__spec">
+                  <dt>Spieldauer</dt>
+                  <dd class="game-card__duration">
+                    <svg class="game-card__timer"><use href="#icon-timer"/></svg>
+                    <span class="game-card__time">30 <small>Min</small></span>
+                  </dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary game-card__btn" href="buchen/index.html">Buchen</a>
+            </div>
+          </li>
+          <li class="game-card">
+            <a class="game-card__media" href="spiele/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/games/placeholder.svg" alt="" width="410" height="300" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <h3 class="game-card__title"><a href="spiele/index.html">Escape</a></h3>
+              <p class="game-card__subtitle">Stürze dich ins geschmolzene Chaos</p>
+              <dl class="game-card__specs">
+                <div class="game-card__spec">
+                  <dt>Schwierigkeit</dt>
+                  <dd class="game-card__rating" aria-label="2 von 4">
+                    <svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg>
+                  </dd>
+                </div>
+                <div class="game-card__spec">
+                  <dt>Spieldauer</dt>
+                  <dd class="game-card__duration">
+                    <svg class="game-card__timer"><use href="#icon-timer"/></svg>
+                    <span class="game-card__time">30 <small>Min</small></span>
+                  </dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary game-card__btn" href="buchen/index.html">Buchen</a>
+            </div>
+          </li>
+          <li class="game-card">
+            <a class="game-card__media" href="spiele/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/games/placeholder.svg" alt="" width="410" height="300" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <h3 class="game-card__title"><a href="spiele/index.html">Box Party</a></h3>
+              <p class="game-card__subtitle">Stürze dich ins geschmolzene Chaos</p>
+              <dl class="game-card__specs">
+                <div class="game-card__spec">
+                  <dt>Schwierigkeit</dt>
+                  <dd class="game-card__rating" aria-label="2 von 4">
+                    <svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg>
+                  </dd>
+                </div>
+                <div class="game-card__spec">
+                  <dt>Spieldauer</dt>
+                  <dd class="game-card__duration">
+                    <svg class="game-card__timer"><use href="#icon-timer"/></svg>
+                    <span class="game-card__time">30 <small>Min</small></span>
+                  </dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary game-card__btn" href="buchen/index.html">Buchen</a>
+            </div>
+          </li>
+          <li class="game-card">
+            <a class="game-card__media" href="spiele/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/games/placeholder.svg" alt="" width="410" height="300" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <h3 class="game-card__title"><a href="spiele/index.html">Floor is Lava</a></h3>
+              <p class="game-card__subtitle">Stürze dich ins geschmolzene Chaos</p>
+              <dl class="game-card__specs">
+                <div class="game-card__spec">
+                  <dt>Schwierigkeit</dt>
+                  <dd class="game-card__rating" aria-label="2 von 4">
+                    <svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg>
+                  </dd>
+                </div>
+                <div class="game-card__spec">
+                  <dt>Spieldauer</dt>
+                  <dd class="game-card__duration">
+                    <svg class="game-card__timer"><use href="#icon-timer"/></svg>
+                    <span class="game-card__time">30 <small>Min</small></span>
+                  </dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary game-card__btn" href="buchen/index.html">Buchen</a>
+            </div>
+          </li>
+          <li class="game-card">
+            <a class="game-card__media" href="spiele/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/games/placeholder.svg" alt="" width="410" height="300" loading="lazy">
+            </a>
+            <div class="game-card__body">
+              <h3 class="game-card__title"><a href="spiele/index.html">Escape</a></h3>
+              <p class="game-card__subtitle">Stürze dich ins geschmolzene Chaos</p>
+              <dl class="game-card__specs">
+                <div class="game-card__spec">
+                  <dt>Schwierigkeit</dt>
+                  <dd class="game-card__rating" aria-label="2 von 4">
+                    <svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star game-card__star--active"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg><svg class="game-card__star"><use href="#icon-star"/></svg>
+                  </dd>
+                </div>
+                <div class="game-card__spec">
+                  <dt>Spieldauer</dt>
+                  <dd class="game-card__duration">
+                    <svg class="game-card__timer"><use href="#icon-timer"/></svg>
+                    <span class="game-card__time">30 <small>Min</small></span>
+                  </dd>
+                </div>
+              </dl>
+              <a class="btn btn--primary game-card__btn" href="buchen/index.html">Buchen</a>
+            </div>
+          </li>
+          <li class="games__more">
+            <a class="games__more-link" href="spiele/index.html">Mehr Spiele<br>entdecken</a>
+          </li>
+        </ul>
+
+        <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Zurück" data-slider-prev hidden>
+          <img src="assets/img/icons/slider-arrow.svg" alt="" width="48" height="48">
+        </button>
+        <button class="slider-arrow slider-arrow--next" type="button" aria-label="Weiter" data-slider-next>
+          <img src="assets/img/icons/slider-arrow.svg" alt="" width="48" height="48">
+        </button>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="tetris-squares" aria-hidden="true"><canvas></canvas></div>
+      <div class="container about__inner">
+        <div class="about__intro">
+          <div class="about__content">
+            <p class="eyebrow">About</p>
+            <h2 class="about__title">Ein neuartiges<br>Freizeitkonzept</h2>
+            <p class="about__text">Das Game Fieber ist ein neuartiges Freizeitkonzept: Erlebe den Nervenkitzel einer echten Game Show und challenge dich mit Freunden, Familie oder Kollegen.</p>
+            <ul class="about__icons" aria-hidden="true">
+              <li><img src="icons/alien-diamond.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-boxy.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-frog.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-medusa.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-grinner.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-kitty.svg" alt="" width="36" height="36"></li>
+              <li><img src="icons/alien-jelly.svg" alt="" width="36" height="36"></li>
+            </ul>
+          </div>
+
+          <div class="about__media">
+            <img class="about__poster" src="assets/img/about/video-poster-placeholder.svg" alt="" width="700" height="392" loading="lazy">
+            <button class="about__play" type="button" aria-label="Video abspielen">
+              <img src="icons/Layout/60/play.svg" alt="" width="60" height="60">
+            </button>
+          </div>
+        </div>
+
+        <ul class="about__cards">
+          <li class="about-card">
+            <div class="about-card__head">
+              <img class="about-card__icon" src="icons/sun-8971FC.svg" alt="" width="36" height="36">
+              <img class="about-card__icon" src="icons/trophy-FF4B00.svg" alt="" width="36" height="36">
+              <h3 class="about-card__title">Spaß</h3>
+            </div>
+            <p class="about-card__text">Erlebe den Nervenkitzel einer echten Game Show und challenge dich mit Freunden, Familie oder Kollegen.</p>
+          </li>
+          <li class="about-card">
+            <div class="about-card__head">
+              <img class="about-card__icon" src="icons/hourglass-8971FC.svg" alt="" width="36" height="36">
+              <img class="about-card__icon" src="icons/mushroom-FF4B00.svg" alt="" width="36" height="36">
+              <h3 class="about-card__title">Für jedes Alter</h3>
+            </div>
+            <p class="about-card__text">Erlebe den Nervenkitzel einer echten Game Show und challenge dich mit Freunden, Familie oder Kollegen.</p>
+          </li>
+          <li class="about-card">
+            <div class="about-card__head">
+              <img class="about-card__icon" src="icons/ghost-FF4B00.svg" alt="" width="36" height="36">
+              <img class="about-card__icon" src="icons/lightning-8971FC.svg" alt="" width="36" height="36">
+              <h3 class="about-card__title">Nervenkitzel</h3>
+            </div>
+            <p class="about-card__text">Erlebe den Nervenkitzel einer echten Game Show und challenge dich mit Freunden, Familie oder Kollegen.</p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="alien-peek" aria-hidden="true" data-alien-peek></div>
+    </section>
+
+    <section class="parties" id="parties">
+      <!-- Netz Waves: animierter Hintergrund (Ebenen: Farbe → Kreise → Punkte → Inhalt) -->
+      <div class="netz-bg" aria-hidden="true"></div>
+      <div class="netz-blobs" aria-hidden="true">
+        <span class="netz-blob netz-blob--1"></span>
+        <span class="netz-blob netz-blob--2"></span>
+      </div>
+      <div class="netz-waves" aria-hidden="true"><canvas></canvas></div>
+      <div class="container section-head">
+        <h2 class="section-title">Parties und Events</h2>
+        <p class="section-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+
+      <div class="container">
+        <ul class="parties__grid">
+          <li class="party-card">
+            <a class="party-card__media" href="parties/jga/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/parties/placeholder.svg" alt="" width="562" height="372" loading="lazy">
+            </a>
+            <h3 class="party-card__title"><a href="parties/jga/index.html">Junggesellenabschied</a></h3>
+            <a class="btn btn--primary party-card__btn" href="parties/jga/index.html" aria-label="Mehr erfahren: Junggesellenabschied">Mehr erfahren</a>
+          </li>
+          <li class="party-card">
+            <a class="party-card__media" href="parties/kindergeburtstag/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/parties/placeholder.svg" alt="" width="562" height="372" loading="lazy">
+            </a>
+            <h3 class="party-card__title"><a href="parties/kindergeburtstag/index.html">Kindergeburtstag</a></h3>
+            <a class="btn btn--primary party-card__btn" href="parties/kindergeburtstag/index.html" aria-label="Mehr erfahren: Kindergeburtstag">Mehr erfahren</a>
+          </li>
+          <li class="party-card">
+            <a class="party-card__media" href="parties/geburtstag/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/parties/placeholder.svg" alt="" width="562" height="372" loading="lazy">
+            </a>
+            <h3 class="party-card__title"><a href="parties/geburtstag/index.html">Geburtstag Erwachsene</a></h3>
+            <a class="btn btn--primary party-card__btn" href="parties/geburtstag/index.html" aria-label="Mehr erfahren: Geburtstag Erwachsene">Mehr erfahren</a>
+          </li>
+          <li class="party-card">
+            <a class="party-card__media" href="parties/firmenevent/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/parties/placeholder.svg" alt="" width="562" height="372" loading="lazy">
+            </a>
+            <h3 class="party-card__title"><a href="parties/firmenevent/index.html">Firmenevent</a></h3>
+            <a class="btn btn--primary party-card__btn" href="parties/firmenevent/index.html" aria-label="Mehr erfahren: Firmenevent">Mehr erfahren</a>
+          </li>
+          <li class="party-card">
+            <a class="party-card__media" href="parties/schulausflug/index.html" tabindex="-1" aria-hidden="true">
+              <img src="assets/img/parties/placeholder.svg" alt="" width="562" height="372" loading="lazy">
+            </a>
+            <h3 class="party-card__title"><a href="parties/schulausflug/index.html">Schulausflüge</a></h3>
+            <a class="btn btn--primary party-card__btn" href="parties/schulausflug/index.html" aria-label="Mehr erfahren: Schulausflüge">Mehr erfahren</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" data-starfield>
+      <canvas class="faq__canvas" aria-hidden="true"></canvas>
+      <div class="container faq__inner">
+        <h2 class="faq__title">Fragen und Antworten</h2>
+
+        <div class="faq__list" data-accordion>
+          <div class="faq__item" data-accordion-item>
+            <h3 class="faq__heading">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-1" id="faq-q-1" data-accordion-trigger>
+                <span>Ab welchem Alter können Kinder mitspielen?</span>
+                <svg class="faq__icon" viewBox="0 0 40 40" aria-hidden="true">
+                  <circle class="faq__icon-circle" cx="20" cy="20" r="19"/>
+                  <path class="faq__icon-h" d="M11 20h18"/>
+                  <path class="faq__icon-v" d="M20 11v18"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-1" role="region" aria-labelledby="faq-q-1">
+              <div class="faq__panel-inner">
+                <p class="faq__answer">Unsere Spielräume sind für Kinder ab 5 Jahren geeignet. Kinder unter 12 Jahren spielen in Begleitung eines Erwachsenen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion-item>
+            <h3 class="faq__heading">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-2" id="faq-q-2" data-accordion-trigger>
+                <span>Wie viele Personen passen in eine Box?</span>
+                <svg class="faq__icon" viewBox="0 0 40 40" aria-hidden="true">
+                  <circle class="faq__icon-circle" cx="20" cy="20" r="19"/>
+                  <path class="faq__icon-h" d="M11 20h18"/>
+                  <path class="faq__icon-v" d="M20 11v18"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-2" role="region" aria-labelledby="faq-q-2">
+              <div class="faq__panel-inner">
+                <p class="faq__answer">In eine Box passen 2 bis 6 Personen. Für größere Gruppen könnt ihr mehrere Boxen gleichzeitig buchen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion-item>
+            <h3 class="faq__heading">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-3" id="faq-q-3" data-accordion-trigger>
+                <span>Brauchen wir eine VR-Brille?</span>
+                <svg class="faq__icon" viewBox="0 0 40 40" aria-hidden="true">
+                  <circle class="faq__icon-circle" cx="20" cy="20" r="19"/>
+                  <path class="faq__icon-h" d="M11 20h18"/>
+                  <path class="faq__icon-v" d="M20 11v18"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-3" role="region" aria-labelledby="faq-q-3">
+              <div class="faq__panel-inner">
+                <p class="faq__answer">Nein. Bei uns spielt ihr ganz ohne Brille – die Spiele werden auf Wände und Boden projiziert und reagieren auf eure Bewegungen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion-item>
+            <h3 class="faq__heading">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-4" id="faq-q-4" data-accordion-trigger>
+                <span>Was sollen wir anziehen?</span>
+                <svg class="faq__icon" viewBox="0 0 40 40" aria-hidden="true">
+                  <circle class="faq__icon-circle" cx="20" cy="20" r="19"/>
+                  <path class="faq__icon-h" d="M11 20h18"/>
+                  <path class="faq__icon-v" d="M20 11v18"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-4" role="region" aria-labelledby="faq-q-4">
+              <div class="faq__panel-inner">
+                <p class="faq__answer">Bequeme Kleidung und Sportschuhe sind ideal. Jacken und Taschen könnt ihr in unserer Garderobe ablegen.</p>
+              </div>
+            </div>
+          </div>
+          <div class="faq__item" data-accordion-item>
+            <h3 class="faq__heading">
+              <button class="faq__question" type="button" aria-expanded="false" aria-controls="faq-5" id="faq-q-5" data-accordion-trigger>
+                <span>Können wir eigene Getränke mitbringen?</span>
+                <svg class="faq__icon" viewBox="0 0 40 40" aria-hidden="true">
+                  <circle class="faq__icon-circle" cx="20" cy="20" r="19"/>
+                  <path class="faq__icon-h" d="M11 20h18"/>
+                  <path class="faq__icon-v" d="M20 11v18"/>
+                </svg>
+              </button>
+            </h3>
+            <div class="faq__panel" id="faq-5" role="region" aria-labelledby="faq-q-5">
+              <div class="faq__panel-inner">
+                <p class="faq__answer">Das Mitbringen von eigenen Speisen und Getränken ist nicht gestattet.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq__more">
+          <a class="link-underline" href="fragen-und-antworten/index.html">Zu Fragen und Antworten</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__main">
+      <ul class="footer__social">
+        <li>
+          <a class="footer__icon-link" href="#" aria-label="Instagram" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+              <circle cx="12" cy="12" r="4.25"/>
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="footer__icon-link" href="#" aria-label="Facebook" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M13.5 22v-8.5h2.9l.45-3.4H13.5V7.95c0-.98.28-1.65 1.68-1.65H17V3.27A24 24 0 0 0 14.4 3.1c-2.6 0-4.37 1.58-4.37 4.5v2.5H7.1v3.4h2.93V22h3.47z"/>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="footer__icon-link" href="#" aria-label="YouTube" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" fill-rule="evenodd" d="M21.6 7.2a2.5 2.5 0 0 0-1.77-1.77C18.27 5 12 5 12 5s-6.27 0-7.83.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.77 1.77C5.73 19 12 19 12 19s6.27 0 7.83-.43a2.5 2.5 0 0 0 1.77-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15l5.2-3L10 9v6z"/>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <nav class="footer__nav" aria-label="Rechtliches">
+        <ul class="footer__links">
+          <li><a class="footer__link" href="impressum/index.html">Impressum</a></li>
+          <li><a class="footer__link" href="agb/index.html">AGB</a></li>
+          <li><a class="footer__link" href="datenschutz/index.html">Datenschutzerklärung</a></li>
+        </ul>
+      </nav>
+
+      <ul class="footer__payments" aria-label="Zahlungsmethoden">
+        <li>
+          <svg class="footer__pay footer__pay--visa" viewBox="0 0 48 16" role="img" aria-label="Visa">
+            <text x="24" y="14" text-anchor="middle" fill="currentColor" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900" font-style="italic">VISA</text>
+          </svg>
+        </li>
+        <li>
+          <svg class="footer__pay footer__pay--mc" viewBox="0 0 30 20" role="img" aria-label="Mastercard">
+            <circle cx="10" cy="10" r="9" fill="currentColor"/>
+            <circle cx="20" cy="10" r="9" fill="currentColor" stroke="var(--color-bg-dark)" stroke-width="1.5"/>
+          </svg>
+        </li>
+        <li>
+          <svg class="footer__pay footer__pay--paypal" viewBox="0 0 20 22" role="img" aria-label="PayPal">
+            <path fill="currentColor" d="M5.6 1h6.1c3.6 0 5.4 1.8 4.9 4.8-.6 3.5-3 5.2-6.4 5.2H8.1l-1.2 7H3L5.6 1z"/>
+            <path fill="currentColor" opacity="0.7" d="M17.6 5.8c1.2.9 1.6 2.4 1.3 4.2-.6 3.4-2.9 5.1-6.3 5.1h-1.4l-1 6H6.4l.4-2.4h1.6l1.2-7h1.9c3.8 0 6.6-2 7.3-5.6l-1.2-.3z"/>
+          </svg>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2026 Game Fieber</p>
+    </div>
+  </footer>
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
